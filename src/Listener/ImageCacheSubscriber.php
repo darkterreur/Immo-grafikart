@@ -3,12 +3,12 @@ namespace App\Listener;
 
 use App\Entity\Property;
 use Doctrine\Common\EventSubscriber;
-use Liip\ImagineBundle\Imagine\Cache\CacheManager;
-use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreFlushEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use Liip\ImagineBundle\Imagine\Cache\CacheManager;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Doctrine\ORM\Event\LifecycleEventArgs;
+use Vich\UploaderBundle\Templating\Helper\UploaderHelper;
 
 class ImageCacheSubscriber implements EventSubscriber
 {
